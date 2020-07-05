@@ -13,11 +13,24 @@ import random
 
 
 def start_game():
+    print("Welcome to the Number Guessing Game!")
+    number = random.randint(0,9)
+    guess = input("Guess a number between 1-10.  ")
+    guess = int(guess) - 1
+    while True:
+        if guess == number:
+            print("You got it!  Thanks for playing")
+        elif guess > number:
+            input("Higher! Guess again:  ")
+        elif guess < number:
+            input("Lower! Guess again:  ")
+          
     """Psuedo-code Hints
     
     When the program starts, we want to:
     ------------------------------------
-    1. Display an intro/welcome message to the player.
+    XX1. Display an intro/welcome message to the player.
+    
     2. Store a random number as the answer/solution.
     3. Continuously prompt the player for a guess.
       a. If the guess greater than the solution, display to the player "It's lower".
