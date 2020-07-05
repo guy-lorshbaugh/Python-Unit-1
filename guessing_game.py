@@ -6,7 +6,7 @@ def start_game():
     print("\n{}\nWelcome to the Number Guessing Game!\n{}\n".format(dashes, dashes))
     play_again = "y"
     while play_again == "y":
-        number = random.randint(0, 9) + 1
+        number = random.randint(1, 10)
         
 # ====> REMOVE THESE TWO LINES BEFORE SUBMITTING PROJECT!!
         ##print("The number is {}.".format(number))
