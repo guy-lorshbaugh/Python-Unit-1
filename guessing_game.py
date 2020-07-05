@@ -1,21 +1,21 @@
 import random
 
-    
+   
 def start_game():
     dashes = ("-" * 36)
     print("\n{}\nWelcome to the Number Guessing Game!\n{}\n".format(dashes, dashes))
     play_again = "y"
+    high_score = 10
+    
     while play_again.lower() == "y":
         number = random.randint(1,10)
-                
+        
 # ====> REMOVE THESE TWO LINES BEFORE SUBMITTING PROJECT!!
         ##print("The number is {}.".format(number))
     
         guess = input("Guess a number between 1-10.  ")
         guess = int(guess)
-        print(guess)
-        guess_count = 0
-        high_score = 10
+        guess_count = 0 
         guess_count = int(guess_count + 1 )
         while guess != number:
             if guess > 10 or guess < 1:
@@ -40,4 +40,3 @@ def start_game():
             print("\nThank you for playing! The game is now closing.\n")
 
 start_game()
-
