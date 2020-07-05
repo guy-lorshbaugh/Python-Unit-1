@@ -14,7 +14,6 @@ def start_game():
 
         guess = int(input("Guess a number between 1-10.  "))
         guess_count = 1
-        high_score = 10
         while guess != number:
             if not (1 <= guess <= 10):
                 guess = input("Your guess must be between 1-10. Please try again.  ")
