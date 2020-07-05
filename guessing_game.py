@@ -13,7 +13,6 @@ def start_game():
         ##print("The number is {}.".format(number))
 
         guess = int(input("Guess a number between 1-10.  "))
-        print(guess)
         guess_count = 1
         high_score = 10
         while guess != number:
