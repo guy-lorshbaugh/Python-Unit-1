@@ -1,5 +1,4 @@
 import random
-
    
 def start_game():
     dashes = ("-" * 36)
@@ -17,22 +16,23 @@ def start_game():
         try:
             guess = int(guess)
         except ValueError as err:
-            guess = int(input("Invalid entry. Please enter a numeral value between 1-10.  "))
-        while guess != number:
-            if not (1 <= guess <= 10):
-                guess = input("Your guess must be between 1-10. Please try again.  ")
-            else:
-                word = 'lower' if guess > number else 'higher'
-                guess = input(f"It's {word}!! Guess again:  ")
-            guess = int(guess)
-            guess_count += 1
-        print(f"You got it! It took you {guess_count} guesses.  Thanks for playing!!")
-        if guess_count < high_score:
-            high_score = guess_count
-        play_again = input("\nWould you like to play again? Y/N  ").lower()
-        if play_again == "y":
-            print("\nThe high score so far is {}. Can you beat it?\n".format(high_score))
+            print("Invalid entry.  Please enter a numeral value between 1-10.")
         else:
-            print("\nThank you for playing! The game is now closing.\n")
-
+            while guess != number:
+                if not (1 <= guess <= 10):
+                    guess = input("Your guess must be between 1-10. Please try again.  ")
+                else:
+                    word = 'lower' if guess > number else 'higher'
+                    guess = input(f"It's {word}!! Guess again:  ")
+                guess = int(guess)
+                guess_count += 1
+            print(f"You got it! It took you {guess_count} guesses.  Thanks for playing!!")
+            if guess_count < high_score:
+                high_score = guess_count
+            play_again = input("\nWould you like to play again? Y/N  ").lower()
+            if play_again == "y":
+                print("\nThe high score so far is {}. Can you beat it?\n".format(high_score))
+            else:
+                print("\nThank you for playing! The game is now closing.\n")
+            
 start_game()
