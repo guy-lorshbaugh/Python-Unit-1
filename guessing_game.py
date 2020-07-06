@@ -1,7 +1,7 @@
 import random
    
 def start_game():
-    dashes = ("-" * 36)
+    dashes = "-" * 36
     print("\n{}\nWelcome to the Number Guessing Game!\n{}\n".format(dashes, dashes))
     play_again = "y"
     high_score = 10
@@ -11,7 +11,7 @@ def start_game():
         guess_count = 1
         try:
             guess = int(guess)
-        except ValueError as err:
+        except ValueError:
             print("Invalid entry.  Please enter a numeral value between 1-10.")
         else:
             while guess != number:
@@ -22,7 +22,7 @@ def start_game():
                     guess = input(f"It's {word}!! Guess again:  ")
                 guess = int(guess)
                 guess_count += 1
-            print(f"You got it! It took you {guess_count} guesses.  Thanks for playing!!")
+            print("You got it! It took you {} guesses.  Thanks for playing!!".format{guess_count})
             if guess_count < high_score:
                 high_score = guess_count
             play_again = input("\nWould you like to play again? Y/N  ").lower()
