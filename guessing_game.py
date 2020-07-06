@@ -7,10 +7,6 @@ def start_game():
     high_score = 10
     while play_again.lower() == "y":
         number = random.randint(1,10)
-        
-# ====> REMOVE THESE TWO LINES BEFORE SUBMITTING PROJECT!!
-        ##print("The number is {}.".format(number))
-
         guess = input("Guess a number between 1-10.  ")
         guess_count = 1
         try:
