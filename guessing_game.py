@@ -19,7 +19,7 @@ def start_game():
                     guess = input("Your guess must be between 1-10. Please try again.  ")
                 else:
                     word = 'lower' if guess > number else 'higher'
-                    guess = input(f"It's {word}!! Guess again:  ")
+                    guess = input("It's {}!! Guess again:  ".format(word))
                 guess = int(guess)
                 guess_count += 1
             print("You got it! It took you {} guesses.  Thanks for playing!!".format(guess_count))
