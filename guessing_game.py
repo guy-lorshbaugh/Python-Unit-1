@@ -22,7 +22,7 @@ def start_game():
                     guess = input(f"It's {word}!! Guess again:  ")
                 guess = int(guess)
                 guess_count += 1
-            print("You got it! It took you {} guesses.  Thanks for playing!!".format{guess_count})
+            print("You got it! It took you {} guesses.  Thanks for playing!!".format(guess_count))
             if guess_count < high_score:
                 high_score = guess_count
             play_again = input("\nWould you like to play again? Y/N  ").lower()
