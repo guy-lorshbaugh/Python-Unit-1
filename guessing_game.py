@@ -12,8 +12,12 @@ def start_game():
 # ====> REMOVE THESE TWO LINES BEFORE SUBMITTING PROJECT!!
         ##print("The number is {}.".format(number))
 
-        guess = int(input("Guess a number between 1-10.  "))
+        guess = input("Guess a number between 1-10.  ")
         guess_count = 1
+        try:
+            guess = int(guess)
+        except ValueError as err:
+            guess = int(input("Invalid entry. Please enter a numeral value between 1-10.  "))
         while guess != number:
             if not (1 <= guess <= 10):
                 guess = input("Your guess must be between 1-10. Please try again.  ")
