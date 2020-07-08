@@ -8,11 +8,7 @@ def start_game():
     while play_again.lower() == "y":
         number = random.randint(1,10)
         guess_count = 0
-
-        print(number)
-
         guess = None
-
         while guess != number:
             guess = input("Guess a number between 1-10.  ")
             try:  
@@ -22,11 +18,12 @@ def start_game():
             else:
                 if not (1 <= guess <= 10):
                     print("Your guess must be between 1-10. Please try again.  ")
+                elif guess == number:
+                    print("You got it! It took you {} guesses.  Thanks for playing!!".format(guess_count))
                 else:
                     word = 'lower' if guess > number else 'higher'
                     print("It's {}!! Guess again:  ".format(word))
                     guess_count += 1
-        print("You got it! It took you {} guesses.  Thanks for playing!!".format(guess_count))
         if guess_count < high_score:
             high_score = guess_count
         play_again = input("\nWould you like to play again? Y/N  ").lower()
