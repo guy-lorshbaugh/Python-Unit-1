@@ -7,7 +7,7 @@ def start_game():
     high_score = 10
     while play_again.lower() == "y":
         number = random.randint(1,10)
-        guess_count = 0
+        guess_count = 1
         guess = None
         while guess != number:
             guess = input("Guess a number between 1-10.  ")
@@ -30,5 +30,7 @@ def start_game():
         if play_again == "y":
             print("\nThe high score so far is {}. Can you beat it?\n".format(high_score))
         else:
-            print("\nThank you for playing! The game is now closing.\n")
+            dashes2 = ("-" * 47)
+            print("\n{}\nThank you for playing! The game is now closing.\n{}\n".format(dashes2,dashes2))
+
 start_game()
