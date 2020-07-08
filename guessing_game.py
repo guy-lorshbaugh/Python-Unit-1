@@ -8,7 +8,7 @@ def start_game():
     while play_again.lower() == "y":
         number = random.randint(1,10)
         guess = input("Guess a number between 1-10.  ")
-        guess_count = 1
+        guess_count = 0
         try:
             guess = int(guess)
         except ValueError:
